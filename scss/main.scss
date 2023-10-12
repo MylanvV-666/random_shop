@@ -1,11 +1,9 @@
 //kleuren
 $color1: #e2cb03;
 $color2: #29503c;
-$color3: #ec6202;
-$color4: #cb2029;
-$color5: #fcfeef;
+$color3: #fcfeef;
 $background: #fff;
-$doorzichtig: rgba(255, 255, 255, 0);
+$doorzichtig: rgba(0, 0, 0, 0.46);
 
 //lettergrotes
 $sizeh1: 50px;
@@ -27,56 +25,427 @@ $font3: 'Tilt Neon', sans-serif;
 }
 
 body {
-  max-width: 100%;
+  background-image: url("assets/home.png");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-header {
-  max-width: 100%;
+.nav1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: $doorzichtig;
+  border-bottom: 1px solid $background;
 
-  .nav1 {
+  a {
+    img {
+      width: 5rem;
+    }
+  }
+
+  div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: $doorzichtig;
+    justify-content: space-evenly;
 
     a {
-      img {
-        width: 5rem;
-      }
-    }
+      text-decoration: none;
+      color: $color3;
+      font-size: $sizeh5;
+      font-family: $font2;
+      padding: 10px;
+      margin: 0 1rem;
 
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-
-      a {
+      button {
         text-decoration: none;
         color: $color2;
         font-size: $sizeh5;
         font-family: $font2;
         padding: 10px;
-        margin: 0 1rem;
+        background-color: $color3;
+        border: none;
+        border-radius: 5px;
+      }
 
-        button {
-          text-decoration: none;
-          color: $color2;
-          font-size: $sizeh5;
-          font-family: $font2;
-          padding: 10px;
-          background-color: $color5;
-          border: none;
-          border-radius: 5px;
-          :hover {
-            background-color: $color2;
-            color: $color5;
-            border: 1px solid $color2;
+      button:hover {
+        background-color: $color2;
+        color: $color3;
+        border: 1px solid $color3;
+        cursor: pointer;
+      }
+    }
+
+    a:hover {
+      color: $color1;
+    }
+  }
+}
+
+.nav2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: $background;
+
+  a {
+    img {
+      width: 5rem;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      text-decoration: none;
+      color: $color2;
+      font-size: $sizeh5;
+      font-family: $font2;
+      padding: 10px;
+      margin: 0 1rem;
+
+      button {
+        text-decoration: none;
+        color: $color2;
+        font-size: $sizeh5;
+        font-family: $font2;
+        padding: 10px;
+        background-color: $color3;
+        border: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: $color2;
+        color: $color3;
+        border: 1px solid $color3;
+        cursor: pointer;
+      }
+    }
+
+    a:hover {
+      color: $color1;
+    }
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $doorzichtig;
+  height: 850px;
+
+  div {
+    align-items: center;
+    width: 100%;
+    padding: 10rem 0;
+
+    h1 {
+      font-family: $font1;
+      font-size: $sizeh1;
+      color: $color3;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: $font2;
+      font-size: $sizeh2;
+      color: $color1;
+      text-align: center;
+    }
+  }
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $background;
+  padding: 5rem 20rem;
+
+  h3 {
+    font-size: $sizeh3;
+    color: $color2;
+    font-family: $font3;
+    padding: 1rem 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: $color3;
+        border-radius: 1rem;
+        margin: 0 1rem;
+        font-family: $font2;
+        font-size: $sizep;
+        color: $color2;
+        text-decoration: none;
+
+        div {
+          width: 200px;
+          height: 200px;
+          margin: 20px 0;
+
+          img {
+            width: 200px;
           }
+        }
+      }
+
+      a:hover {
+        color: $color3;
+        background-color: $color2;
+      }
+    }
+
+    a {
+      font-family: $font2;
+      font-size: $sizep;
+      color: $color2;
+      text-decoration: none;
+      margin: 1rem;
+    }
+
+    a:hover {
+      color: $color1;
+    }
+  }
+}
+
+#overzicht {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  background-color: $background;
+  #filters {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    div {
+      display: flex;
+      flex-direction: column;
+      p {
+        color: $color2;
+        font-family: $font3;
+        font-size: $sizep;
+      }
+      div {
+        display: flex;
+        flex-direction: row;
+        button {
+          border: none;
+          border-radius: 0.5rem;
+          background-color: $color3;
+          color: $color2;
+          font-family: $font2;
+          font-size: $sizep;
+          margin: 10px;
+          padding: 5px;
+          cursor: pointer;
+          width: 150px;
+        }
+        button:hover {
+          border: 1px solid $color3;
+          background-color: $color2;
+          color: $color3;
+        }
+        button:active {
+          border: 1px solid $color3;
+          background-color: $color2;
+          color: $color3;
+        }
+      }
+    }
+  }
+  #producten {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      a {
+        text-decoration: none;
+        color: $color2;
+        background-color: $color3;
+        width: 320px;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0.5rem;
+        padding: 1rem;
+        div {
+          width: 200px;
+          height: 200px;
+          img {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 0.5rem auto;
+          }
+        }
+        h4 {
+          font-family: $font3;
+          font-size: $sizeh4;
+          height: 80px;
+        }
+        p {
+          font-family: $font2;
+          font-size: $sizep;
+          height: 100px;
+        }
+        h5 {
+          font-family: $font1;
+          font-size: $sizeh5;
+          align-self: flex-end;
+        }
+      }
+      a:hover {
+        color: $color3;
+        background-color: $color2;
+      }
+    }
+    #nummers {
+      div {
+        a {
+          background-color: $background;
+          font-family: $font1;
+          width: 20px;
+        }
+        a:hover {
+          color: $color1;
         }
       }
     }
   }
 }
+
+#inlog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: $background;
+  padding: 10.1rem 0;
+  img {
+    width: 250px;
+    margin: 2rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    div {
+      margin: 1rem 0;
+      label {
+        color: $color2;
+        font-family: $font3;
+        font-size: $sizeh5;
+      }
+      input {
+        background-color: $color3;
+        color: $color1;
+        border: none;
+        font-size: $sizep;
+        padding: 1rem;
+        width: 500px;
+      }
+    }
+    a {
+      color: $color2;
+      font-size: $sizep;
+      font-family: $font2;
+      text-decoration: none;
+      margin: 0.5rem;
+    }
+    a:hover {
+      color: $color1;
+    }
+    button {
+      background-color: $color2;
+      color: $color3;
+      border: none;
+      font-family: $font3;
+      font-size: $sizep;
+      border-radius: 1rem;
+      width: 400px;
+      padding: 0.5rem;
+    }
+    button:hover {
+      background-color: $color3;
+      color: $color2;
+      border: 1px solid $color2;
+    }
+  }
+}
+
+footer {
+  background-color: $color2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+
+  div {
+    h3 {
+      font-size: $sizeh3;
+      font-family: $font3;
+      color: $color1;
+    }
+
+    p {
+      font-size: $sizep;
+      font-family: $font2;
+      color: $color3;
+    }
+
+    div {
+      a {
+        margin: 0 0.5rem;
+
+        img {
+          width: 50px;
+        }
+      }
+    }
+
+    img {
+      width: 100px;
+      margin: 0.5rem auto;
+    }
+  }
+}
+
+
+
+
